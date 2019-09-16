@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefWidth="273.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.vjezbe.ControllerIspit">
+   <top>
+      <GridPane prefHeight="223.0" prefWidth="273.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints maxWidth="110.0" minWidth="13.0" prefWidth="83.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="253.0" minWidth="10.0" prefWidth="191.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="86.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField fx:id="studentTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="155.0" promptText="Unesite studenta..." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Student:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Microsoft YaHei" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="57.0" text="Predmet:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Microsoft YaHei" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="predmetTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="155.0" promptText="Unesite predmet..." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="67.0" text="Ocjena:" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Microsoft YaHei" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="35.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="ocjenaTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="154.0" promptText="Unesite ocjenu..." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Vrijeme ispita:" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Microsoft YaHei" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="19.0" prefWidth="140.0" text="Pretraživanje ispita" textFill="#0266a8" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Microsoft YaHei Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#fill" prefHeight="25.0" prefWidth="101.0" text="Pretraži" textFill="#0266a8" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="35.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Microsoft YaHei Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#3070c9" />
+               </effect>
+            </Button>
+            <DatePicker fx:id="vrijemeIspitaDatePicker" prefHeight="25.0" prefWidth="155.0" promptText="Odaberi datum i vrijeme..." GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+         <effect>
+            <Blend />
+         </effect>
+      </GridPane>
+   </top>
+   <left>
+      <TableView fx:id="ispitTableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="predmetColumn" prefWidth="95.0" text="Predmet" />
+          <TableColumn fx:id="studentColumn" prefWidth="90.0" text="Student" />
+            <TableColumn fx:id="ocjenaColumn" prefWidth="43.0" text="Ocjena" />
+            <TableColumn fx:id="vrijemeIspitaColumn" prefWidth="121.0" text="Vrijeme ispita" />
+        </columns>
+      </TableView>
+   </left>
+</BorderPane>

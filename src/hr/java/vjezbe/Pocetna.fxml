@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.vjezbe.Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Profesori">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#loadProfesorPanel" text="Dohvati profesore" />
+                  <MenuItem mnemonicParsing="false" onAction="#loadProfesorUnosPanel" text="Unesi profesora" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Studenti">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#loadStudentiPanel" text="Dohvati studente" />
+                  <MenuItem mnemonicParsing="false" onAction="#loadStudentUnosPanel" text="Unesi studenta" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Predmeti">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#loadPredmetiPanel" text="Dohvati predmete" />
+                  <MenuItem mnemonicParsing="false" onAction="#loadPredmetUnosPanel" text="Unesi predmet" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Ispiti">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#loadIspitiPanel" text="Dohvati ispite" />
+                  <MenuItem mnemonicParsing="false" onAction="#loadIspitUnosPanel" text="Unesi ispit" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <effect>
+      <InnerShadow color="#1f83e8" />
+   </effect>
+</BorderPane>

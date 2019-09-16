@@ -1,0 +1,10 @@
+1
+1
+profesor
+Ivo
+Ivic
+2
+2
+predavac
+Karlo
+Karloviæ
